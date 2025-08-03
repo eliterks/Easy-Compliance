@@ -1,14 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React, { useState } from 'react';
+import { useAuth } from '@/context/AuthContext';
+import Login from './Login';
+import IndustrySelection from './IndustrySelection';
+import Dashboard from './Dashboard';
 
 const Index = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
+  const { user } = useAuth();
+  const [currentStep, setCurrentStep] = useState<'login' | 'industry' | 'dashboard'>('login');
+
+  // Determine which screen to show based on user state
+  React.useEffect(() => {
+    if (user) {
+      if (user.industry) {
+        setCurrentStep('dashboard');
+      } else {
+        setCurrentStep('industry');
+      }
+    } else {
+      setCurrentStep('login');
+    }
+  }, [user]);
+
+  if (currentStep === 'login') {
+    return <Login onLoginSuccess={() => setCurrentStep('industry')} />;
+  }
+
+  if (currentStep === 'industry') {
+    return <IndustrySelection onIndustrySelected={() => setCurrentStep('dashboard')} />;
+  }
+
+  return <Dashboard />;
 };
 
 export default Index;
