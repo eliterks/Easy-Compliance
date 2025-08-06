@@ -1,5 +1,5 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "delhi-flow-guide",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,8 @@
     "build:prod": "vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview",
-    "serve": "vite preview --port 4173"
+    "serve": "vite preview --port 4173",
+    "deploy": "npm run build && netlify deploy --prod"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
