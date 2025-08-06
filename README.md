@@ -1,149 +1,155 @@
-<<<<<<< HEAD
-# Welcome to your Lovable project
+# Delhi Flow Guide - Startup Compliance Simplified
 
-## Project info
+**Transform your regulatory journey from chaos to clarity with AI-powered compliance management.**
 
-**URL**: https://lovable.dev/projects/a9f685b6-511f-4194-b13b-1aa98fe38ede
+## 🚀 Project Overview
 
-## How can I edit this code?
+Delhi Flow Guide is a comprehensive startup compliance platform that streamlines the complex process of business registration, licensing, and regulatory compliance in India. Built with modern technologies, it provides an intuitive dashboard for founders to navigate their compliance journey efficiently.
 
-There are several ways of editing your application.
+### ✨ Key Features
 
-**Use Lovable**
+- **AI-Generated Roadmaps**: Custom compliance checklists tailored to your business
+- **Sector-Specific Templates**: Pre-built roadmaps for retail, restaurants, fintech, and more
+- **One-Click Portal Integration**: Direct links to government portals with deep-linking
+- **Real-Time Status Tracker**: Monitor compliance progress with visual indicators
+- **Smart Alerts & Reminders**: Never miss important deadlines
+- **Document Management**: Secure storage for all compliance documents
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a9f685b6-511f-4194-b13b-1aa98fe38ede) and start prompting.
+## 🛠 Technologies Used
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, shadcn/ui components
+- **Routing**: React Router v6
+- **Icons**: Lucide React
+- **Forms**: React Hook Form with Zod validation
+- **Charts**: Recharts for data visualization
+- **Build Tool**: Vite with SWC
+- **Deployment**: Netlify-ready with optimized builds
 
-**Use your preferred IDE**
+## 🏗 Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```
+delhi-flow-guide/
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── ui/             # shadcn/ui components
+│   │   ├── ComplianceTracker.tsx
+│   │   └── RoadmapGenerator.tsx
+│   ├── pages/              # Main page components
+│   │   ├── LandingPage.tsx # Modern hero sections
+│   │   ├── Dashboard.tsx   # Compliance dashboard
+│   │   ├── Login.tsx       # Authentication
+│   │   └── IndustrySelection.tsx
+│   ├── context/            # React context providers
+│   ├── hooks/              # Custom React hooks
+│   └── lib/                # Utility functions
+├── public/                 # Static assets
+├── netlify.toml           # Netlify configuration
+└── DEPLOYMENT.md          # Deployment guide
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚦 Getting Started
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js 18+ and npm
+- Git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Clone the repository
+git clone https://github.com/eliterks/Compliance-Hub.git
+cd delhi-flow-guide
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a9f685b6-511f-4194-b13b-1aa98fe38ede) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-=======
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/a9f685b6-511f-4194-b13b-1aa98fe38ede
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/a9f685b6-511f-4194-b13b-1aa98fe38ede) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run deploy       # Build and deploy to Netlify
 ```
 
-**Edit a file directly in GitHub**
+## 🌐 Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The project is configured for easy deployment on Netlify:
 
-**Use GitHub Codespaces**
+### Quick Deploy
+1. Run `npm run build` to create the `dist` folder
+2. Drag the `dist` folder to [Netlify](https://netlify.com)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Git-based Deployment (Recommended)
+1. Connect your repository to Netlify
+2. Use these build settings:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+   - **Node version**: `18`
 
-## What technologies are used for this project?
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
 
-This project is built with:
+## 🎨 Features Implemented
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Landing Page
+- **Dark Hero Section**: "Startup Compliance, Reinvented" with dashboard mockup
+- **Statistics Showcase**: Key metrics (₹3.17L+ saved, 28,000+ startups helped)
+- **Founders' Stories**: Real before/after experiences with visual comparisons
+- **Powerful Features Grid**: 6-card layout showcasing platform capabilities
 
-## How can I deploy this project?
+### Dashboard
+- **Compliance Roadmap**: Step-by-step guidance with progress tracking
+- **Industry-Specific**: Customized workflows for different business types
+- **Real-time Updates**: Live status tracking and notifications
+- **Document Management**: Secure file storage and organization
 
-Simply open [Lovable](https://lovable.dev/projects/a9f685b6-511f-4194-b13b-1aa98fe38ede) and click on Share -> Publish.
+## 📱 Responsive Design
 
-## Can I connect a custom domain to my Lovable project?
+- Mobile-first approach with Tailwind CSS
+- Optimized for all screen sizes
+- Touch-friendly interfaces
+- Progressive loading and animations
 
-Yes, you can!
+## ⚡ Performance Features
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Code Splitting**: Vendor and router bundles separated
+- **Lazy Loading**: Components loaded on demand
+- **Optimized Assets**: Minified CSS/JS with gzip compression
+- **CDN Ready**: Netlify's global CDN for fast delivery
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
->>>>>>> 2bd6a8f5268b140e55cf853f98218838930c852b
+## 🔒 Security & SEO
+
+- Security headers configured in netlify.toml
+- SEO-optimized meta tags and descriptions
+- HTTPS enforced
+- Performance monitoring ready
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m 'Add feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+For support and questions:
+- Create an issue in the repository
+- Check the [DEPLOYMENT.md](./DEPLOYMENT.md) guide
+- Review the Netlify documentation
+
+---
+
+**Built with ❤️ for Indian startups to simplify compliance and accelerate growth.**
