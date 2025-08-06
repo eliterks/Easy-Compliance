@@ -1,35 +1,32 @@
 import React, { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import Login from './Login';
 import IndustrySelection from './IndustrySelection';
-import Dashboard from './Dashboard';
 
 const Index = () => {
   const { user } = useAuth();
-  const [currentStep, setCurrentStep] = useState<'login' | 'industry' | 'dashboard'>('login');
+  const navigate = useNavigate();
+  const [currentStep, setCurrentStep] = useState<'login' | 'industry'>('login');
 
   // Determine which screen to show based on user state
   React.useEffect(() => {
     if (user) {
       if (user.industry) {
-        setCurrentStep('dashboard');
+        navigate('/dashboard');
       } else {
         setCurrentStep('industry');
       }
     } else {
       setCurrentStep('login');
     }
-  }, [user]);
-
-  if (currentStep === 'login') {
-    return <Login onLoginSuccess={() => setCurrentStep('industry')} />;
-  }
+  }, [user, navigate]);
 
   if (currentStep === 'industry') {
-    return <IndustrySelection onIndustrySelected={() => setCurrentStep('dashboard')} />;
+    return <IndustrySelection onIndustrySelected={() => navigate('/dashboard')} />;
   }
 
-  return <Dashboard />;
+  return <Login onLoginSuccess={() => setCurrentStep('industry')} />;
 };
 
 export default Index;

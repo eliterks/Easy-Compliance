@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -15,13 +16,15 @@ import {
   Calendar,
   User,
   Building2,
-  Download
+  Download,
+  ArrowRight
 } from 'lucide-react';
 import RoadmapGenerator from '@/components/RoadmapGenerator';
 import ComplianceTracker from '@/components/ComplianceTracker';
 
 const Dashboard: React.FC = () => {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const [roadmap, setRoadmap] = useState<any>(null);
   const [showGenerator, setShowGenerator] = useState(false);
 
@@ -214,10 +217,21 @@ const Dashboard: React.FC = () => {
           <TabsContent value="documents">
             <Card className="border-0 shadow-soft">
               <CardHeader>
-                <CardTitle>Document Management</CardTitle>
-                <CardDescription>
-                  Upload and manage your compliance documents
-                </CardDescription>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle>Document Management</CardTitle>
+                    <CardDescription>
+                      Upload and manage your compliance documents
+                    </CardDescription>
+                  </div>
+                  <Button 
+                    onClick={() => navigate('/documents')}
+                    className="bg-blue-600 hover:bg-blue-700"
+                  >
+                    Go to Documents
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
               </CardHeader>
               <CardContent className="p-12 text-center">
                 <Upload className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
@@ -225,7 +239,10 @@ const Dashboard: React.FC = () => {
                 <p className="text-muted-foreground mb-6">
                   Upload documents related to your compliance steps for easy tracking.
                 </p>
-                <Button variant="outline">
+                <Button 
+                  variant="outline"
+                  onClick={() => navigate('/documents')}
+                >
                   <Upload className="mr-2 h-4 w-4" />
                   Upload Documents
                 </Button>
@@ -236,10 +253,21 @@ const Dashboard: React.FC = () => {
           <TabsContent value="reminders">
             <Card className="border-0 shadow-soft">
               <CardHeader>
-                <CardTitle>Reminders & Alerts</CardTitle>
-                <CardDescription>
-                  Manage your compliance deadlines and notifications
-                </CardDescription>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle>Reminders & Alerts</CardTitle>
+                    <CardDescription>
+                      Manage your compliance deadlines and notifications
+                    </CardDescription>
+                  </div>
+                  <Button 
+                    onClick={() => navigate('/reminders')}
+                    className="bg-blue-600 hover:bg-blue-700"
+                  >
+                    Go to Reminders
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
               </CardHeader>
               <CardContent className="p-12 text-center">
                 <Calendar className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
@@ -247,7 +275,10 @@ const Dashboard: React.FC = () => {
                 <p className="text-muted-foreground mb-6">
                   Set up reminders for important compliance deadlines.
                 </p>
-                <Button variant="outline">
+                <Button 
+                  variant="outline"
+                  onClick={() => navigate('/reminders')}
+                >
                   <Calendar className="mr-2 h-4 w-4" />
                   Add Reminder
                 </Button>
