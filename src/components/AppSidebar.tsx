@@ -28,8 +28,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const navigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Dashboard', href: '/dashboard', icon: Building2 },
-  { name: 'Projects', href: '/projects', icon: FolderOpen },
-  { name: 'Task Board', href: '/tasks', icon: CheckSquare },
+
   { name: 'Documents', href: '/documents', icon: FileText },
   { name: 'Reminders', href: '/reminders', icon: Calendar },
 ];

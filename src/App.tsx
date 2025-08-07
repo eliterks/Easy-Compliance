@@ -8,7 +8,7 @@ import AppSidebar from "@/components/AppSidebar";
 import Index from "./pages/Index";
 import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard";
-import TaskBoard from "./pages/TaskBoard";
+
 import Documents from "./pages/Documents";
 import Reminders from "./pages/Reminders";
 import Team from "./pages/Team";
@@ -37,7 +37,7 @@ const App = () => (
             
             {/* Protected routes with sidebar */}
             <Route path="/dashboard" element={<LayoutWrapper><Dashboard /></LayoutWrapper>} />
-            <Route path="/tasks" element={<LayoutWrapper><TaskBoard /></LayoutWrapper>} />
+            
             <Route path="/documents" element={<LayoutWrapper><Documents /></LayoutWrapper>} />
             <Route path="/reminders" element={<LayoutWrapper><Reminders /></LayoutWrapper>} />
             <Route path="/team" element={<LayoutWrapper><Team /></LayoutWrapper>} />
