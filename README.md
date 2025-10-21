@@ -30,7 +30,7 @@ Easy Compliance is a comprehensive startup compliance platform that streamlines 
 ## 🏗 Project Structure
 
 ```
-delhi-flow-guide/
+easy-compliance/
 ├── src/
 │   ├── components/          # Reusable UI components
 │   │   ├── ui/             # shadcn/ui components
